@@ -20,7 +20,6 @@ public class ClientLoader {
             String line;
             while ((line = bufferedReader.readLine()) != null) {
                 String[] data = line.split(";");
-                // assume that first and second elements (side and order type) are the same
                 String[] orderQuantityString = data[2].split("=");
                 int orderQuantity = Integer.parseInt(orderQuantityString[1]);
 
@@ -48,9 +47,5 @@ public class ClientLoader {
             System.out.println("unable to get next client order");
             return null;
         }
-    }
-
-    public List<ClientOrder> getClientOrderList() {
-        return this.clientOrderList;
     }
 }

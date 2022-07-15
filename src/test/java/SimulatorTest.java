@@ -40,9 +40,13 @@ public class SimulatorTest {
         simulator = new Simulator();
         simulator.init("simulator_test.csv", "simulator_client_order_test.csv");
         simulator.run();
-        String result = "Strategy out: [N:1000@53.0]\n" +
-                "Filled: 1000@53.05, Cumulative Quantity: 1000\n" +
-                "Client order completed\n";
+        String result = "Strategy out: [N:100@52.95][N:200@52.9][N:1050@53.0]\n" +
+                "Strategy out: [C:100@52.95][N:50@52.95][N:5000@53.05]\n" +
+                "Filled: 5000@53.05, Cumulative Quantity: 5000\n" +
+                "Strategy out: [C:50@52.95][C:1050@53.0][N:50@52.85][N:280@53.05][N:350@52.8]\n" +
+                "Filled: 280@53.05, Cumulative Quantity: 5280\n" +
+                "Strategy out: [C:200@52.9][N:250@52.75]\n" +
+                "Strategy out: [C:50@52.85][N:800@52.6]\n";
         assertEquals(outContent.toString(), result);
     }
 }

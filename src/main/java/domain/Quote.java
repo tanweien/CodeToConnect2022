@@ -28,14 +28,6 @@ public class Quote extends MarketData {
         }
     }
 
-    public Bid getBestBid() {
-        if (this.bidList.size() > 0) {
-            return this.bidList.get(0);
-        } else {
-            return null;
-        }
-    }
-
     @Override
     public String toString() {
         return this.getTimestamp() + ", " + this.bidList.toString() + ", " + this.askList.toString();
