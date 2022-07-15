@@ -21,4 +21,19 @@ public class Ask {
     public String toString() {
         return askPrice + " " + askSize;
     }
+
+    @Override
+    public boolean equals(Object object) {
+        if (object == this) {
+            return true;
+        }
+
+        if (!(object instanceof Ask)) {
+            return false;
+        }
+
+        Ask ask = (Ask) object;
+
+        return ask.getAskSize() == this.getAskSize() && ask.getAskPrice() == this.getAskPrice();
+    }
 }

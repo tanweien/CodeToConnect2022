@@ -51,10 +51,11 @@ public class OrderMap {
     }
 
     public List<Order> getOrderList(double price) {
+        List<Order> orderList = new ArrayList<>();
         if (this.orderMap.containsKey(price)) {
             return orderMap.get(price);
         } else {
-            return null;
+            return orderList;
         }
     }
 
