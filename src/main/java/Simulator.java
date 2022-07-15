@@ -1,3 +1,12 @@
+import domain.ClientOrder;
+import domain.MarketData;
+import domain.Quote;
+import domain.Trade;
+import loader.ClientLoader;
+import loader.MarketLoader;
+import request.Request;
+import response.Response;
+
 import java.util.List;
 
 public class Simulator {

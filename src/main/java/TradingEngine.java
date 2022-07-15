@@ -1,3 +1,10 @@
+import domain.*;
+import request.AggressiveOrderRequest;
+import request.CancelRequest;
+import request.OrderRequest;
+import request.Request;
+import response.*;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -35,7 +42,7 @@ public class TradingEngine {
             return requestList;
         }
 
-        double targetPercentage = clientOrder.getTargetPercentage();
+        double targetPercentage = clientOrder.getTargetDecimal();
         List<Order> targetOrderList = new ArrayList<>();
 
         for (int i = 0; i < quote.getBidList().size(); i++) {

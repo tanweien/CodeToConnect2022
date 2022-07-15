@@ -1,4 +1,9 @@
-abstract class Request {
+package request;
+
+import domain.ClientOrder;
+import domain.Order;
+
+public abstract class Request {
     private final ClientOrder clientOrder;
     private final Order order;
 

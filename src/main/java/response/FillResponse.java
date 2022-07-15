@@ -1,3 +1,7 @@
+package response;
+
+import domain.Order;
+
 public class FillResponse extends Response {
 
     public FillResponse(Order order) {

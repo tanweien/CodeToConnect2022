@@ -1,3 +1,8 @@
+package request;
+
+import domain.ClientOrder;
+import domain.Order;
+
 public class CancelRequest extends Request {
 
 

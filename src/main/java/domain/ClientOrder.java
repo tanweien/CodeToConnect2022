@@ -1,18 +1,20 @@
+package domain;
+
 public class ClientOrder {
     // assuming only 1 client order, and order is buy
     private final String order;
     private final int totalOrderQuantity;
-    private final double targetPercentage;
+    private final double targetDecimal;
     private final double minimumRatio;
     private final double maximumRatio;
     private int cumulativeQuantity;
 
-    ClientOrder(int orderQuantity, double targetPercentage) {
+    public ClientOrder(int orderQuantity, double targetDecimal) {
         this.order = "B";
         this.totalOrderQuantity = orderQuantity;
-        this.targetPercentage = targetPercentage;
-        this.minimumRatio = 0.8 * targetPercentage;
-        this.maximumRatio = 1.2 * targetPercentage;
+        this.targetDecimal = targetDecimal;
+        this.minimumRatio = 0.8 * targetDecimal;
+        this.maximumRatio = 1.2 * targetDecimal;
         this.cumulativeQuantity = 0;
     }
 
@@ -50,12 +52,12 @@ public class ClientOrder {
         return this.totalOrderQuantity - this.cumulativeQuantity;
     }
 
-    public double getTargetPercentage() {
-        return targetPercentage;
+    public double getTargetDecimal() {
+        return targetDecimal;
     }
 
     @Override
     public String toString() {
-        return this.totalOrderQuantity + ":" + this.targetPercentage;
+        return this.totalOrderQuantity + ":" + this.targetDecimal;
     }
 }

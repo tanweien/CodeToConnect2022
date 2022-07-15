@@ -1,8 +1,10 @@
+package domain;
+
 public class Trade extends MarketData {
     private final double tradePrice;
     private final int tradeVolume;
 
-    protected Trade(int timestamp, double tradePrice, int tradeVolume) {
+    public Trade(int timestamp, double tradePrice, int tradeVolume) {
         super("T", timestamp);
         this.tradePrice = tradePrice;
         this.tradeVolume = tradeVolume;

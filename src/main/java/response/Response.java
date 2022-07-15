@@ -1,7 +1,11 @@
-abstract class Response {
+package response;
+
+import domain.Order;
+
+abstract public class Response {
     private final Order order;
 
-    protected Response(Order order) {
+    public Response(Order order) {
         this.order = order;
     }
 

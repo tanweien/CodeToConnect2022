@@ -1,9 +1,11 @@
+package domain;
+
 public class Order {
     private int timestamp;
     private int quantity;
     private double price;
 
-    Order(int timestamp, int quantity, double price) {
+    public Order(int timestamp, int quantity, double price) {
         this.timestamp = timestamp;
         this.quantity = quantity;
         this.price = price;

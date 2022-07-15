@@ -1,3 +1,5 @@
+package domain;
+
 public class Ask {
     private final double askPrice;
     private final int askSize;

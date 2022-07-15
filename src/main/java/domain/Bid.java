@@ -1,3 +1,5 @@
+package domain;
+
 public class Bid {
     private final double bidPrice;
     private final int bidSize;

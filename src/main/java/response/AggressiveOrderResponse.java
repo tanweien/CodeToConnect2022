@@ -1,3 +1,7 @@
+package response;
+
+import domain.Order;
+
 public class AggressiveOrderResponse extends Response {
 
     public AggressiveOrderResponse(Order order) {

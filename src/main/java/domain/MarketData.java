@@ -1,4 +1,6 @@
-abstract class MarketData {
+package domain;
+
+abstract public class MarketData {
     private final String dataType;
     private final int timestamp;
 
