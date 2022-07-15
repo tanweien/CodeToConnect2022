@@ -1,7 +1,6 @@
 package domain;
 
 public class ClientOrder {
-    // assuming only 1 client order, and order is buy
     private final String order;
     private final int totalOrderQuantity;
     private final double targetDecimal;

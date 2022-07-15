@@ -24,9 +24,9 @@ public class Simulator {
         this.clientLoader = new ClientLoader();
     }
 
-    public void init() {
-        marketLoader.loadMarketData("market_data.csv");
-        clientLoader.loadClientOrders("client_order.csv");
+    public void init(String marketData, String clientOrderData) {
+        marketLoader.loadMarketData(marketData);
+        clientLoader.loadClientOrders(clientOrderData);
     }
 
     public void handleTrade(MarketData marketData) {
@@ -91,7 +91,7 @@ public class Simulator {
 
     public static void main(String[] args) {
         Simulator simulator = new Simulator();
-        simulator.init();
+        simulator.init("market_data.csv", "client_order.csv");
         simulator.run();
     }
 }

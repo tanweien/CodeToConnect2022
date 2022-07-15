@@ -39,7 +39,7 @@ public class SimulatedExchange {
         return responseList;
     }
 
-    public CancelResponse handleCancelRequest(CancelRequest cancelRequest) {
+    private CancelResponse handleCancelRequest(CancelRequest cancelRequest) {
         Order cancelOrder = cancelRequest.getOrder();
         ClientOrder clientOrder = cancelRequest.getClientOrder();
         if (simulatedExchangeOrderMap.containsKey(clientOrder)) {
@@ -48,12 +48,12 @@ public class SimulatedExchange {
         return new CancelResponse(cancelOrder);
     }
 
-    public AggressiveOrderResponse handleAggressiveOrderRequest(AggressiveOrderRequest aggressiveOrderRequest) {
+    private AggressiveOrderResponse handleAggressiveOrderRequest(AggressiveOrderRequest aggressiveOrderRequest) {
         Order aggressiveOrder = aggressiveOrderRequest.getOrder();
         return new AggressiveOrderResponse(aggressiveOrder);
     }
 
-    public OrderResponse handleOrderRequest(OrderRequest orderRequest) {
+    private OrderResponse handleOrderRequest(OrderRequest orderRequest) {
         Order order = orderRequest.getOrder();
         ClientOrder clientOrder = orderRequest.getClientOrder();
         if (!simulatedExchangeOrderMap.containsKey(clientOrder)) {
@@ -82,7 +82,6 @@ public class SimulatedExchange {
         }
         return responseList;
     }
-
 
     public List<Response> generateFillBestBidOrderResponseList(ClientOrder clientOrder, int timestamp) {
         List<Response> responseList = new ArrayList<>();
