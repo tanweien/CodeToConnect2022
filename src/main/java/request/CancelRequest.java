@@ -5,7 +5,6 @@ import domain.Order;
 
 public class CancelRequest extends Request {
 
-
     public CancelRequest(ClientOrder clientOrder, Order cancelOrder) {
         super(clientOrder, cancelOrder);
     }
