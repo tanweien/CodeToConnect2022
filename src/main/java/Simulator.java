@@ -8,7 +8,11 @@ import request.Request;
 import response.Response;
 
 
-// Based on feedback after the hackathon, the recommended design pattern to use is the Chain of Responsibility (handler) pattern
+/* Areas of improvement:
+ 1. the recommended design pattern to use is the Chain of Responsibility (handler) pattern
+ 2. simulatedExchange should be able to work with multiple trading engines (ie use hashmap)
+ 3. improve unit tests to cover all test cases (lack of time during actual hackathon)
+ */
 
 import java.util.List;
 
