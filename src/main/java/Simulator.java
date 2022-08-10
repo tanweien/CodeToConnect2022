@@ -7,6 +7,9 @@ import loader.MarketLoader;
 import request.Request;
 import response.Response;
 
+
+// Based on feedback after the hackathon, the recommended design pattern to use is the Chain of Responsibility (handler) pattern
+
 import java.util.List;
 
 public class Simulator {
